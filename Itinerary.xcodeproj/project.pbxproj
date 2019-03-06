@@ -15,6 +15,11 @@
 		5032B24F222D7586002AD09A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B24E222D7586002AD09A /* Data.swift */; };
 		5032B253222D7834002AD09A /* TripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5032B252222D7834002AD09A /* TripViewController.storyboard */; };
 		5032B255222D7853002AD09A /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B254222D7853002AD09A /* TripsViewController.swift */; };
+		5032B27C222FE1F3002AD09A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B27B222FE1F3002AD09A /* UIViewExtensions.swift */; };
+		5032B27E222FE24B002AD09A /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B27D222FE24B002AD09A /* TripsTableViewCell.swift */; };
+		5032B280222FE2EB002AD09A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5032B27F222FE2EB002AD09A /* Colors.xcassets */; };
+		5032B282222FE332002AD09A /* LuckiestGuy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5032B281222FE332002AD09A /* LuckiestGuy-Regular.ttf */; };
+		5032B284222FE33B002AD09A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B283222FE33B002AD09A /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		5032B24E222D7586002AD09A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		5032B252222D7834002AD09A /* TripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripViewController.storyboard; sourceTree = "<group>"; };
 		5032B254222D7853002AD09A /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		5032B27B222FE1F3002AD09A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		5032B27D222FE24B002AD09A /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		5032B27F222FE2EB002AD09A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		5032B281222FE332002AD09A /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
+		5032B283222FE33B002AD09A /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 		5032B235222D6E46002AD09A /* Itinerary */ = {
 			isa = PBXGroup;
 			children = (
+				5032B27A222FE1E1002AD09A /* Resources */,
+				5032B279222FE1D7002AD09A /* Extensions */,
 				5032B250222D77FF002AD09A /* Views */,
 				5032B24D222D73DD002AD09A /* Model */,
 				5032B236222D6E46002AD09A /* AppDelegate.swift */,
@@ -101,8 +113,27 @@
 			children = (
 				5032B252222D7834002AD09A /* TripViewController.storyboard */,
 				5032B254222D7853002AD09A /* TripsViewController.swift */,
+				5032B27D222FE24B002AD09A /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		5032B279222FE1D7002AD09A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5032B27B222FE1F3002AD09A /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5032B27A222FE1E1002AD09A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5032B281222FE332002AD09A /* LuckiestGuy-Regular.ttf */,
+				5032B27F222FE2EB002AD09A /* Colors.xcassets */,
+				5032B283222FE33B002AD09A /* Theme.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5032B241222D6E49002AD09A /* LaunchScreen.storyboard in Resources */,
+				5032B280222FE2EB002AD09A /* Colors.xcassets in Resources */,
 				5032B253222D7834002AD09A /* TripViewController.storyboard in Resources */,
+				5032B282222FE332002AD09A /* LuckiestGuy-Regular.ttf in Resources */,
 				5032B23E222D6E49002AD09A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,9 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5032B237222D6E46002AD09A /* AppDelegate.swift in Sources */,
+				5032B284222FE33B002AD09A /* Theme.swift in Sources */,
 				5032B249222D6EDE002AD09A /* TripFunctions.swift in Sources */,
 				5032B24C222D73C8002AD09A /* TripModel.swift in Sources */,
 				5032B24F222D7586002AD09A /* Data.swift in Sources */,
+				5032B27C222FE1F3002AD09A /* UIViewExtensions.swift in Sources */,
+				5032B27E222FE24B002AD09A /* TripsTableViewCell.swift in Sources */,
 				5032B255222D7853002AD09A /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
