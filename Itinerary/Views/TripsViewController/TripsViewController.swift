@@ -11,9 +11,6 @@ import UIKit
 class TripsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
- 
-    
-    
     @IBOutlet weak var addButton: UIButton!
     
     
@@ -34,6 +31,16 @@ class TripsViewController: UIViewController {
         
     }
 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddTripSegue" {
+            let popup = segue.destination as! AddTripViewController
+            popup.doneSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension TripsViewController: UITableViewDataSource {

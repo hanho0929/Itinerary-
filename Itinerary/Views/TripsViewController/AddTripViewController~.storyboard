@@ -72,7 +72,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus"/>
                                 <connections>
-                                    <segue destination="v6l-g8-P8F" kind="presentation" identifier="toAddTripSegue" id="Rbs-DA-jRZ"/>
+                                    <segue destination="a8z-X1-BMc" kind="presentation" id="Rbs-DA-jRZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -96,11 +96,18 @@
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-134.48275862068968"/>
         </scene>
-        <!--AddTripViewController-->
-        <scene sceneID="2tj-H1-xeq">
+        <!--View Controller-->
+        <scene sceneID="tuk-C6-fJj">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddTripViewController" id="v6l-g8-P8F" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxd-oe-LaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="a8z-X1-BMc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w1A-5R-xvN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ABe-vG-nMY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfQ-Zd-NwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="-139"/>
         </scene>
