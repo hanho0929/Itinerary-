@@ -11,6 +11,6 @@ import UIKit
 class Theme {
     static let mainFontName = "LuckiestGuy-Regular"
     static let accnet = UIColor(named: "Accent")
-    static let background = UIColor(named: "Background")
-    static let tint = UIColor(named: "Tint")
+    static let backgroundColor = UIColor(named: "Background")
+    static let tintColor = UIColor(named: "Tint")
 }

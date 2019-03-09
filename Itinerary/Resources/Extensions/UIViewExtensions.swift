@@ -10,9 +10,10 @@ import UIKit
 
 
 extension UIView {
-    func addRoundedAndConerRadius() {
+    func addShadowAndRoundedCorner() {
         layer.shadowOffset = CGSize.zero
         layer.shadowOpacity = 1
+        layer.shadowColor = UIColor.darkGray.cgColor
         layer.cornerRadius = 10
     }
     

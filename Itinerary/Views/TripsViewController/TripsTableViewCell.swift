@@ -15,9 +15,9 @@ class TripsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        cardView.addRoundedAndConerRadius()
+        cardView.addShadowAndRoundedCorner()
         
-        titleLabel.font = UIFont(name: Theme.mainFontName, size: 60)
+        titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
         cardView.backgroundColor = UIColor(named: "Accent")
     }
     

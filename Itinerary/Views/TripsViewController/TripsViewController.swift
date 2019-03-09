@@ -11,6 +11,11 @@ import UIKit
 class TripsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+ 
+    
+    
+    @IBOutlet weak var addButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -24,6 +29,9 @@ class TripsViewController: UIViewController {
         })
         
         view.backgroundColor = UIColor(named: "Background")
+        addButton.createFloatActionButton()
+        addButton.backgroundColor = Theme.tintColor
+        
     }
 
 }
@@ -39,6 +47,7 @@ extension TripsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
 
         cell.setUp(tripModel: Data.tripModels[indexPath.item])
+        cell.titleLabel.numberOfLines = 1
         
         return cell
     }

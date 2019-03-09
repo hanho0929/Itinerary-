@@ -63,10 +63,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwm-WS-ijf">
+                                <rect key="frame" x="311" y="603" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="74u-Yr-AqT"/>
+                                    <constraint firstAttribute="width" constant="56" id="kZh-2z-ZkR"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <segue destination="v6l-g8-P8F" kind="presentation" id="Rbs-DA-jRZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="top" secondItem="agf-va-gES" secondAttribute="top" id="7UL-Mc-jpy"/>
+                            <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="Xwm-WS-ijf" secondAttribute="trailing" constant="8" id="9ZR-zf-zKe"/>
+                            <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="Xwm-WS-ijf" secondAttribute="bottom" constant="8" id="ChH-vh-IvO"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="L6U-Eq-ug2" secondAttribute="trailing" id="TKU-Nc-Yhy"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="L6U-Eq-ug2" secondAttribute="bottom" id="gVc-hF-Zz0"/>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="leading" secondItem="agf-va-gES" secondAttribute="leading" id="hhK-rK-Aod"/>
@@ -74,6 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="agf-va-gES"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Xwm-WS-ijf" id="FFw-b4-NWl"/>
                         <outlet property="tableView" destination="L6U-Eq-ug2" id="ptw-Ap-OAo"/>
                     </connections>
                 </viewController>
@@ -81,5 +96,16 @@
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-134.48275862068968"/>
         </scene>
+        <!--AddTripViewController-->
+        <scene sceneID="2tj-H1-xeq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddTripViewController" id="v6l-g8-P8F" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxd-oe-LaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-139"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus" width="30" height="30"/>
+    </resources>
 </document>
