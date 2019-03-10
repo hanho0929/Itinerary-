@@ -21,12 +21,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSH-Mz-nHf" customClass="PopupUIView" customModule="Itinerary" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="343" height="155"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ExO-f8-tZM">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="155"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Trip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-DL-KyX">
                                         <rect key="frame" x="8" y="8" width="327" height="47"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-2T-3Cn">
                                         <rect key="frame" x="8" y="62" width="327" height="30"/>
@@ -48,13 +52,30 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="sabe:" destination="a8z-X1-BMc" eventType="touchUpInside" id="jmm-YL-XWo"/>
+                                            <action selector="save:" destination="a8z-X1-BMc" eventType="touchUpInside" id="jmm-YL-XWo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fj7-iJ-eMt">
+                                        <rect key="frame" x="295" y="8" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="d8U-Ns-WVW"/>
+                                            <constraint firstAttribute="width" constant="40" id="ltZ-1k-iSI"/>
+                                        </constraints>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="addPhoto:" destination="a8z-X1-BMc" eventType="touchUpInside" id="xV3-LJ-jHo"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ExO-f8-tZM" secondAttribute="bottom" id="34w-Z3-uWl"/>
                                     <constraint firstAttribute="height" constant="155" id="GUg-rJ-76e"/>
+                                    <constraint firstItem="ExO-f8-tZM" firstAttribute="leading" secondItem="uSH-Mz-nHf" secondAttribute="leading" id="aC1-5v-7Rn"/>
+                                    <constraint firstItem="ExO-f8-tZM" firstAttribute="top" secondItem="uSH-Mz-nHf" secondAttribute="top" id="aeC-yq-BGc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ExO-f8-tZM" secondAttribute="trailing" id="fII-Wm-KnJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fj7-iJ-eMt" secondAttribute="trailing" constant="8" id="pA9-MJ-rtj"/>
+                                    <constraint firstItem="Fj7-iJ-eMt" firstAttribute="top" secondItem="uSH-Mz-nHf" secondAttribute="top" constant="8" id="qD1-HC-KQs"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -68,6 +89,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="pJ3-Bx-Flv" id="arf-aK-zNU"/>
+                        <outlet property="imageView" destination="ExO-f8-tZM" id="7K5-C9-J3l"/>
                         <outlet property="saveButton" destination="2PE-JI-bXU" id="oVv-XP-jaC"/>
                         <outlet property="titleLabel" destination="wbB-DL-KyX" id="Q2q-53-Khx"/>
                         <outlet property="tripTextField" destination="bBi-2T-3Cn" id="9Ed-ha-znf"/>
@@ -78,4 +100,8 @@
             <point key="canvasLocation" x="925.60000000000002" y="-139.880059970015"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" name="Tint"/>
 </document>

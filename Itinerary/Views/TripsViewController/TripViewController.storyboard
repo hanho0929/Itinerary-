@@ -18,20 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L6U-Eq-ug2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L6U-Eq-ug2">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="dkW-tx-ATm">
+                                    <rect key="frame" x="0.0" y="225" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="197" id="v0x-9x-THW" customClass="TripsTableViewCell" customModule="Itinerary" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="197" id="v0x-9x-THW" customClass="TripsTableViewCell" customModule="Itinerary" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="197"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v0x-9x-THW" id="zZR-KX-RfA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="196.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="197"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zj9-eU-miK">
                                                     <rect key="frame" x="23" y="19" width="329" height="159"/>
                                                     <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Tn-J8-BAB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="159"/>
+                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lU4-K1-PWQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="329" height="159"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -41,9 +49,13 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="1Tn-J8-BAB" firstAttribute="leading" secondItem="Zj9-eU-miK" secondAttribute="leading" id="6Q6-32-B0f"/>
                                                         <constraint firstAttribute="trailing" secondItem="lU4-K1-PWQ" secondAttribute="trailing" id="ReX-3k-fN6"/>
+                                                        <constraint firstItem="1Tn-J8-BAB" firstAttribute="top" secondItem="Zj9-eU-miK" secondAttribute="top" id="bkz-KD-1Fo"/>
                                                         <constraint firstItem="lU4-K1-PWQ" firstAttribute="top" secondItem="Zj9-eU-miK" secondAttribute="top" id="kf3-AY-NAk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1Tn-J8-BAB" secondAttribute="trailing" id="kgi-U5-tDS"/>
                                                         <constraint firstItem="lU4-K1-PWQ" firstAttribute="leading" secondItem="Zj9-eU-miK" secondAttribute="leading" id="l7w-5W-Sv5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1Tn-J8-BAB" secondAttribute="bottom" id="lT7-J0-kZm"/>
                                                         <constraint firstAttribute="bottom" secondItem="lU4-K1-PWQ" secondAttribute="bottom" id="sbK-wO-OWT"/>
                                                     </constraints>
                                                 </view>
@@ -59,6 +71,7 @@
                                         <connections>
                                             <outlet property="cardView" destination="Zj9-eU-miK" id="BhA-pm-LVM"/>
                                             <outlet property="titleLabel" destination="lU4-K1-PWQ" id="ebj-YN-3nw"/>
+                                            <outlet property="tripImageView" destination="1Tn-J8-BAB" id="Wh6-cE-N9y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
