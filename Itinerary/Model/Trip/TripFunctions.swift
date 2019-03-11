@@ -6,7 +6,7 @@
 //  Copyright © 2019 hanho. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class TripFunctions {
@@ -32,8 +32,9 @@ class TripFunctions {
     }
     
     
-    static func updateTrip(tripModel: TripModel) {
-        
+    static func updateTrip(at index: Int, title: String, image: UIImage? = nil) {
+        Data.tripModels[index].title = title
+        Data.tripModels[index].image = image
     }
     
     
