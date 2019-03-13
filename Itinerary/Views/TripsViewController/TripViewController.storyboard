@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -102,10 +103,63 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Xwm-WS-ijf" id="FFw-b4-NWl"/>
+                        <outlet property="helpView" destination="aiH-GP-rMW" id="fBB-1L-2Go"/>
                         <outlet property="tableView" destination="L6U-Eq-ug2" id="ptw-Ap-OAo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I7Z-wc-6Eg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="aiH-GP-rMW">
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="777"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gh1-zY-TFv">
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="777"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-jx-1nN" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="18" y="693" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="556-Wx-3cY"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="IZS-v9-eHK" eventType="touchUpInside" id="Zu4-IB-vkl"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NAK-oW-xrH">
+                                <rect key="frame" x="18" y="40" width="335" height="388"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ja-OT-zc1">
+                                        <rect key="frame" x="70" y="0.0" width="195" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteHelp" translatesAutoresizingMaskIntoConstraints="NO" id="loa-q9-EE8">
+                                        <rect key="frame" x="0.0" y="80" width="335" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="bFP-Ex-zBw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editingHelp" translatesAutoresizingMaskIntoConstraints="NO" id="gkh-Ra-z2s">
+                                        <rect key="frame" x="0.0" y="238" width="335" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="gTg-J4-rVU"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="NAK-oW-xrH" firstAttribute="leading" secondItem="gh1-zY-TFv" secondAttribute="leading" constant="18" id="A1R-Y4-9xx"/>
+                            <constraint firstAttribute="trailing" secondItem="NAK-oW-xrH" secondAttribute="trailing" constant="18" id="CGs-zS-4h0"/>
+                            <constraint firstAttribute="trailing" secondItem="Epz-jx-1nN" secondAttribute="trailing" constant="18" id="Cpb-tL-exk"/>
+                            <constraint firstAttribute="bottom" secondItem="Epz-jx-1nN" secondAttribute="bottom" constant="40" id="Ikg-NG-1eV"/>
+                            <constraint firstItem="Epz-jx-1nN" firstAttribute="leading" secondItem="gh1-zY-TFv" secondAttribute="leading" constant="18" id="KMv-J9-qEG"/>
+                            <constraint firstItem="NAK-oW-xrH" firstAttribute="top" secondItem="gh1-zY-TFv" secondAttribute="top" constant="40" id="th7-Zn-Dyf"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="-134.48275862068968"/>
         </scene>
@@ -119,6 +173,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deleteHelp" width="359" height="139"/>
+        <image name="editingHelp" width="359" height="139"/>
         <image name="plus" width="30" height="30"/>
     </resources>
 </document>
