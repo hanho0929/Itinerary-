@@ -43,6 +43,9 @@ class TripsViewController: UIViewController {
         addButton.backgroundColor = Theme.tintColor
         
     }
+    
+    
+    
 
     
     
@@ -75,7 +78,7 @@ extension TripsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.identifier) as! TripsTableViewCell
 
         cell.setUp(tripModel: Data.tripModels[indexPath.item])
         cell.titleLabel.numberOfLines = 1
@@ -127,6 +130,16 @@ extension TripsViewController: UITableViewDataSource {
         edit.image = #imageLiteral(resourceName: "edit")
         edit.backgroundColor = UIColor(named: "EditColor")
         return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let trip = Data.tripModels[indexPath.row]
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        vc.tripTitle = trip.title
+        navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     

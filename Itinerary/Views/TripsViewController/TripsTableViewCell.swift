@@ -17,7 +17,6 @@ class TripsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         cardView.addShadowAndRoundedCorner()
-        
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 32)
         cardView.backgroundColor = UIColor(named: "Accent")
         tripImageView.layer.cornerRadius = cardView.layer.cornerRadius
