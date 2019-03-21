@@ -50,6 +50,7 @@ class ActivitiesViewController: UIViewController {
     
     @IBAction func addAction(_ sender: AppUIButton) {
         let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        
         let dayAction = UIAlertAction(title: "Day", style: .default, handler: handelAddDay)
         
         let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
@@ -62,7 +63,7 @@ class ActivitiesViewController: UIViewController {
         alert.addAction(activityAction)
         alert.addAction(cancelAction)
         alert.popoverPresentationController?.sourceView = sender
-        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: sender.bounds.height)
         
         present(alert, animated: true)
         
@@ -72,6 +73,11 @@ class ActivitiesViewController: UIViewController {
     
     func handelAddDay(action: UIAlertAction) {
         print("Add new Day")
+//        let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
+//        let vc = storyboard.instantiateInitialViewController() as! AddDayViewController
+        let vc = AddDayViewController.getInstance()
+        present(vc, animated: true)
+        
     }
 
 }
