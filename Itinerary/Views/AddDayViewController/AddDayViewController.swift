@@ -28,12 +28,6 @@ class AddDayViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 24)
         
-        // Shadow on title
-        titleLabel.layer.shadowOpacity = 1
-        titleLabel.layer.shadowColor = UIColor.white.cgColor
-        titleLabel.layer.shadowOffset = CGSize.zero
-        titleLabel.layer.shadowRadius = 5
-        
     }
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -41,16 +35,8 @@ class AddDayViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        titleTextField.rightViewMode = .never
-        
-        guard titleTextField.text != "", let newTripName = titleTextField.text else {
-            titleTextField.layer.borderColor = UIColor.red.cgColor
-            titleTextField.layer.borderWidth = 1
-            titleTextField.layer.cornerRadius = 5
-            titleTextField.placeholder = "Trip Name Required"
-            titleTextField.rightViewMode = .always
-            return
-        }
+        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
+
         
 //        if let index = tripIndextToEdit {
 //            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)

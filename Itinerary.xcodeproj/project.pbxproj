@@ -37,6 +37,7 @@
 		5032B2D722435C7E002AD09A /* AddDayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5032B2D622435C7E002AD09A /* AddDayViewController.storyboard */; };
 		5032B2DB22435D42002AD09A /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2DA22435D42002AD09A /* AddDayViewController.swift */; };
 		5032B2DD22436D70002AD09A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2DC22436D70002AD09A /* UIViewControllerExtension.swift */; };
+		5032B2DF22437065002AD09A /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2DE22437065002AD09A /* UITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		5032B2D622435C7E002AD09A /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
 		5032B2DA22435D42002AD09A /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		5032B2DC22436D70002AD09A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5032B2DE22437065002AD09A /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,9 +161,10 @@
 		5032B279222FE1D7002AD09A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				5032B27B222FE1F3002AD09A /* UIViewExtension.swift */,
 				5032B28522327EBB002AD09A /* UIButtonExtension.swift */,
+				5032B2DE22437065002AD09A /* UITextFieldExtension.swift */,
 				5032B2A4223EA333002AD09A /* UITableViewCellExtension.swift */,
+				5032B27B222FE1F3002AD09A /* UIViewExtension.swift */,
 				5032B2DC22436D70002AD09A /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
@@ -323,6 +326,7 @@
 				5032B28B22346BBE002AD09A /* AddTripViewController.swift in Sources */,
 				5032B2A1223B9862002AD09A /* HeaderTableViewCell.swift in Sources */,
 				5032B28622327EBB002AD09A /* UIButtonExtension.swift in Sources */,
+				5032B2DF22437065002AD09A /* UITextFieldExtension.swift in Sources */,
 				5032B290223470EB002AD09A /* AppUIButton.swift in Sources */,
 				5032B27C222FE1F3002AD09A /* UIViewExtension.swift in Sources */,
 				5032B27E222FE24B002AD09A /* TripsTableViewCell.swift in Sources */,
