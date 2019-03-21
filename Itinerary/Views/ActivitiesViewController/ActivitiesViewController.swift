@@ -13,6 +13,7 @@ class ActivitiesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
+    @IBOutlet weak var addButton: AppUIButton!
     
     var tripId: UUID!
     var tripTitle = ""
@@ -22,6 +23,7 @@ class ActivitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tripTitle
+        addButton.createFloatActionButton()
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
@@ -46,7 +48,31 @@ class ActivitiesViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func addAction(_ sender: AppUIButton) {
+        let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction = UIAlertAction(title: "Day", style: .default, handler: handelAddDay)
+        
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { (action) in
+            print("Add new activity")
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
+        
+        present(alert, animated: true)
+        
+        
+    }
     
+    
+    func handelAddDay(action: UIAlertAction) {
+        print("Add new Day")
+    }
 
 }
 

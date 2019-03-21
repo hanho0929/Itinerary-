@@ -79,7 +79,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwm-WS-ijf">
-                                <rect key="frame" x="311" y="539" width="56" height="56"/>
+                                <rect key="frame" x="299" y="547" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="74u-Yr-AqT"/>
                                     <constraint firstAttribute="width" constant="56" id="kZh-2z-ZkR"/>
@@ -94,8 +94,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="top" secondItem="agf-va-gES" secondAttribute="top" id="7UL-Mc-jpy"/>
-                            <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="Xwm-WS-ijf" secondAttribute="trailing" constant="8" id="9ZR-zf-zKe"/>
-                            <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="Xwm-WS-ijf" secondAttribute="bottom" constant="8" id="ChH-vh-IvO"/>
+                            <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="Xwm-WS-ijf" secondAttribute="trailing" constant="20" id="9ZR-zf-zKe"/>
+                            <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="Xwm-WS-ijf" secondAttribute="bottom" id="ChH-vh-IvO"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="L6U-Eq-ug2" secondAttribute="trailing" id="TKU-Nc-Yhy"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="L6U-Eq-ug2" secondAttribute="bottom" id="gVc-hF-Zz0"/>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="leading" secondItem="agf-va-gES" secondAttribute="leading" id="hhK-rK-Aod"/>
@@ -201,4 +201,5 @@
             <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <color key="tintColor" name="Tint"/>
 </document>

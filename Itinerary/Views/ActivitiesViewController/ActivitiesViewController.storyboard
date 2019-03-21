@@ -129,21 +129,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tK-9H-jhj" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="299" y="611" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="FHW-Gx-Gen"/>
+                                    <constraint firstAttribute="height" constant="56" id="umB-Jb-VcW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <action selector="addAction:" destination="FcX-FG-yn2" eventType="touchUpInside" id="Ana-Ff-txr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hbF-cE-GIY" firstAttribute="trailing" secondItem="9tK-9H-jhj" secondAttribute="trailing" constant="20" id="4wJ-1o-g4P"/>
                             <constraint firstItem="hbF-cE-GIY" firstAttribute="bottom" secondItem="b0B-w3-CWp" secondAttribute="bottom" id="F1y-Ha-03X"/>
                             <constraint firstItem="b0B-w3-CWp" firstAttribute="top" secondItem="VCz-BL-SZV" secondAttribute="top" id="WHo-1G-X8V"/>
                             <constraint firstItem="Xbo-7q-41U" firstAttribute="bottom" secondItem="VCz-BL-SZV" secondAttribute="bottom" id="WhY-0o-jGH"/>
                             <constraint firstItem="Xbo-7q-41U" firstAttribute="top" secondItem="hbF-cE-GIY" secondAttribute="top" id="bEG-nW-4E1"/>
                             <constraint firstItem="Xbo-7q-41U" firstAttribute="leading" secondItem="hbF-cE-GIY" secondAttribute="leading" id="kJZ-dY-PcM"/>
                             <constraint firstItem="b0B-w3-CWp" firstAttribute="leading" secondItem="VCz-BL-SZV" secondAttribute="leading" id="kux-ob-m7A"/>
+                            <constraint firstItem="hbF-cE-GIY" firstAttribute="bottom" secondItem="9tK-9H-jhj" secondAttribute="bottom" id="roi-HJ-ICb"/>
                             <constraint firstItem="b0B-w3-CWp" firstAttribute="trailing" secondItem="VCz-BL-SZV" secondAttribute="trailing" id="up9-MM-wUY"/>
                             <constraint firstItem="Xbo-7q-41U" firstAttribute="trailing" secondItem="hbF-cE-GIY" secondAttribute="trailing" id="xad-d3-fcm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hbF-cE-GIY"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="9tK-9H-jhj" id="y3E-Ex-Lt4"/>
                         <outlet property="backgroundImageView" destination="b0B-w3-CWp" id="oI2-Sw-GJM"/>
                         <outlet property="tableView" destination="Xbo-7q-41U" id="JUr-e5-PTD"/>
                     </connections>
@@ -154,6 +169,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" width="30" height="30"/>
         <namedColor name="Accent">
             <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

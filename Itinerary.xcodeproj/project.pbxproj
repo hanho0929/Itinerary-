@@ -25,7 +25,6 @@
 		5032B28B22346BBE002AD09A /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B28A22346BBE002AD09A /* AddTripViewController.swift */; };
 		5032B28E22346F76002AD09A /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B28D22346F76002AD09A /* PopupUIView.swift */; };
 		5032B290223470EB002AD09A /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B28F223470EB002AD09A /* AppUIButton.swift */; };
-		5032B2932238EFDC002AD09A /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5032B2922238EFDB002AD09A /* ActivitiesViewController.storyboard */; };
 		5032B2952238F04E002AD09A /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2942238F04E002AD09A /* ActivitiesViewController.swift */; };
 		5032B2992238F2F6002AD09A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2982238F2F6002AD09A /* DayModel.swift */; };
 		5032B29B2238F3A3002AD09A /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B29A2238F3A3002AD09A /* ActivityModel.swift */; };
@@ -34,6 +33,7 @@
 		5032B2A1223B9862002AD09A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2A0223B9862002AD09A /* HeaderTableViewCell.swift */; };
 		5032B2A3223DBCD9002AD09A /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2A2223DBCD9002AD09A /* ActivityTableViewCell.swift */; };
 		5032B2A5223EA333002AD09A /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2A4223EA333002AD09A /* UITableViewCellExtensions.swift */; };
+		5032B2D422435800002AD09A /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5032B2922238EFDB002AD09A /* ActivitiesViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -279,7 +279,7 @@
 				5032B28822346B68002AD09A /* AddTripViewController.storyboard in Resources */,
 				5032B241222D6E49002AD09A /* LaunchScreen.storyboard in Resources */,
 				5032B280222FE2EB002AD09A /* Colors.xcassets in Resources */,
-				5032B2932238EFDC002AD09A /* ActivitiesViewController.storyboard in Resources */,
+				5032B2D422435800002AD09A /* ActivitiesViewController.storyboard in Resources */,
 				5032B253222D7834002AD09A /* TripViewController.storyboard in Resources */,
 				5032B282222FE332002AD09A /* LuckiestGuy-Regular.ttf in Resources */,
 				5032B23E222D6E49002AD09A /* Assets.xcassets in Resources */,
