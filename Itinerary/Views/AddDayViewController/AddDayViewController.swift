@@ -13,7 +13,7 @@ class AddDayViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var subtitleTextField: UITextField!
     
     @IBOutlet weak var cancelButton: UIButton!
@@ -21,8 +21,8 @@ class AddDayViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     
-    var doneSaving:(() -> ())?
-    var tripIndextToEdit: Int?
+    var doneSaving:((DayModel) -> ())?
+    var tripIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +35,21 @@ class AddDayViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
-        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
+//        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
 
         
-//        if let index = tripIndextToEdit {
-//            TripFunctions.updateTrip(at: index, title: newTripName, image: imageView.image)
-//        } else {
-//            TripFunctions.createTrip(tripModel: TripModel(title: newTripName, image: imageView.image))
-//        }
+        let dayModel = DayModel(title: datePicker.date, subtitle: subtitleTextField.text ?? "", data: nil)
         
+        DayFunctions.createDay(tripIndex: tripIndex, dayModel: dayModel)
         
         
         if let doneSaving = doneSaving {
-            doneSaving()
+            doneSaving(dayModel)
         }
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
 }

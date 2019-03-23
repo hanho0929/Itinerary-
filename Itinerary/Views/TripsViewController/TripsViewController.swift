@@ -54,7 +54,8 @@ class TripsViewController: UIViewController {
             let popup = segue.destination as! AddTripViewController
             popup.tripIndextToEdit = self.tripIndextToEdit
             popup.doneSaving = { [weak self] in
-                self?.tableView.reloadData()
+                guard let self = self else { return }
+                self.tableView.reloadData()
             }
             tripIndextToEdit = nil
         }

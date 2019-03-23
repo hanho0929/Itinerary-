@@ -20,15 +20,7 @@ class ActivitiesViewController: UIViewController {
     var tripModel: TripModel?
     var sectionHederHeight: CGFloat = 0.0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = tripTitle
-        addButton.createFloatActionButton()
-        // Do any additional setup after loading the view.
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
+    fileprivate func updateTableView() {
         TripFunctions.readTrip(by: tripId) { [weak self] (model) in
             guard let self = self else { return }
             self.tripModel = model
@@ -39,6 +31,18 @@ class ActivitiesViewController: UIViewController {
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = tripTitle
+        addButton.createFloatActionButton()
+        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        updateTableView()
         
         
         sectionHederHeight = tableView.dequeueReusableCell(withIdentifier: HeaderTableViewCell.identifier)?.contentView.bounds.height ?? 0
@@ -73,9 +77,20 @@ class ActivitiesViewController: UIViewController {
     
     func handelAddDay(action: UIAlertAction) {
         print("Add new Day")
-//        let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
-//        let vc = storyboard.instantiateInitialViewController() as! AddDayViewController
-        let vc = AddDayViewController.getInstance()
+        let vc = AddDayViewController.getInstance() as! AddDayViewController
+        vc.tripIndex = Data.tripModels.firstIndex(where: { (tripModel) -> Bool in
+            tripModel.id == tripId
+        })
+        vc.doneSaving = { [weak self] (dayModel) -> () in
+            guard let self = self else { return }
+//            let indexArray = [self.tripModel?.dayModels.count ?? 0]
+            
+            
+            
+            self.tripModel?.dayModels.append(dayModel)
+            let indexArray = [self.tripModel?.dayModels.firstIndex(of: dayModel) ?? 0]
+            self.tableView.insertSections(IndexSet(indexArray), with: .automatic)
+        }
         present(vc, animated: true)
         
     }

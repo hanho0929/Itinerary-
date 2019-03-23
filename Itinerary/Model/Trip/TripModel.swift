@@ -12,7 +12,14 @@ struct TripModel {
     let id: UUID
     var title: String
     var image: UIImage?
-    var dayModels = [DayModel]()
+    var dayModels = [DayModel]() {
+        didSet {
+            // Called when a new value is assigned to dayModels
+//            dayModels = dayModels.sorted(by: {$0.title < $1.title})
+            
+            dayModels = dayModels.sorted(by: <)
+        }
+    }
     
     
     
