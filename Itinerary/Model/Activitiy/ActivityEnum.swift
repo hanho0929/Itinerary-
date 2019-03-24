@@ -9,9 +9,10 @@
 import Foundation
 
 
-enum ActivityType {
+enum ActivityType: Int {
+    case trip
     case school
-    case children
     case food
     case pet
+    case children
 }

@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 
 class Data {
     static var tripModels = [TripModel]()
+    //static var tripModels = [NSManagedObject]()
 }

@@ -35,7 +35,6 @@ class TripsTableViewCell: UITableViewCell {
         }
         
         
-        // tripImageView.image = tripModel.image
     }
 
 

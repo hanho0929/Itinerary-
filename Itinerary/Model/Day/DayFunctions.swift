@@ -10,7 +10,7 @@ import Foundation
 
 
 class DayFunctions {
-    static func createDay(tripIndex: Int, dayModel: DayModel) {
+    static func createDay(at tripIndex: Int, using dayModel: DayModel) {
         // Replace withe real data store code
         
         Data.tripModels[tripIndex].dayModels.append(dayModel)

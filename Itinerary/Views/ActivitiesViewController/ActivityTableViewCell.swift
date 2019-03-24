@@ -39,6 +39,8 @@ class ActivityTableViewCell: UITableViewCell {
             return #imageLiteral(resourceName: "food")
         case .pet:
             return #imageLiteral(resourceName: "pet")
+        case .trip:
+            return #imageLiteral(resourceName: "default")
         }
         
     }

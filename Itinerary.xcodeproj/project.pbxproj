@@ -40,6 +40,10 @@
 		5032B2DF22437065002AD09A /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2DE22437065002AD09A /* UITextFieldExtension.swift */; };
 		5032B2E122437493002AD09A /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2E022437493002AD09A /* DayFunctions.swift */; };
 		5032B2E3224456A2002AD09A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5032B2E2224456A2002AD09A /* DateExtension.swift */; };
+		503898632246CA75000EDB43 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503898622246CA75000EDB43 /* AddActivityViewController.swift */; };
+		503898672246D94E000EDB43 /* AddActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503898662246D94E000EDB43 /* AddActivityViewController.storyboard */; };
+		503898692246E153000EDB43 /* ActivityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503898682246E153000EDB43 /* ActivityFunctions.swift */; };
+		5038986C22477E55000EDB43 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		5032B2DE22437065002AD09A /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		5032B2E022437493002AD09A /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		5032B2E2224456A2002AD09A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		503898622246CA75000EDB43 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		503898662246D94E000EDB43 /* AddActivityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddActivityViewController.storyboard; sourceTree = "<group>"; };
+		503898682246E153000EDB43 /* ActivityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFunctions.swift; sourceTree = "<group>"; };
+		5038986B22477E55000EDB43 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 				5032B236222D6E46002AD09A /* AppDelegate.swift */,
 				5032B23F222D6E49002AD09A /* LaunchScreen.storyboard */,
 				5032B242222D6E49002AD09A /* Info.plist */,
+				5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */,
 			);
 			path = Itinerary;
 			sourceTree = "<group>";
@@ -148,6 +157,7 @@
 				5032B251222D780B002AD09A /* TripsViewController */,
 				5032B2912238EF89002AD09A /* ActivitiesViewController */,
 				5032B2D522435C3F002AD09A /* AddDayViewController */,
+				503898612246CA36000EDB43 /* AddActivitiesViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,8 +221,8 @@
 			children = (
 				5032B2922238EFDB002AD09A /* ActivitiesViewController.storyboard */,
 				5032B2942238F04E002AD09A /* ActivitiesViewController.swift */,
-				5032B2A0223B9862002AD09A /* HeaderTableViewCell.swift */,
 				5032B2A2223DBCD9002AD09A /* ActivityTableViewCell.swift */,
+				5032B2A0223B9862002AD09A /* HeaderTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			children = (
 				5032B29A2238F3A3002AD09A /* ActivityModel.swift */,
 				5032B29C2238F43A002AD09A /* ActivityEnum.swift */,
+				503898682246E153000EDB43 /* ActivityFunctions.swift */,
 			);
 			path = Activitiy;
 			sourceTree = "<group>";
@@ -242,6 +253,15 @@
 				5032B2DA22435D42002AD09A /* AddDayViewController.swift */,
 			);
 			path = AddDayViewController;
+			sourceTree = "<group>";
+		};
+		503898612246CA36000EDB43 /* AddActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				503898662246D94E000EDB43 /* AddActivityViewController.storyboard */,
+				503898622246CA75000EDB43 /* AddActivityViewController.swift */,
+			);
+			path = AddActivitiesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +327,7 @@
 				5032B280222FE2EB002AD09A /* Colors.xcassets in Resources */,
 				5032B2D422435800002AD09A /* ActivitiesViewController.storyboard in Resources */,
 				5032B2D722435C7E002AD09A /* AddDayViewController.storyboard in Resources */,
+				503898672246D94E000EDB43 /* AddActivityViewController.storyboard in Resources */,
 				5032B253222D7834002AD09A /* TripViewController.storyboard in Resources */,
 				5032B282222FE332002AD09A /* LuckiestGuy-Regular.ttf in Resources */,
 				5032B23E222D6E49002AD09A /* Assets.xcassets in Resources */,
@@ -333,11 +354,14 @@
 				5032B2A1223B9862002AD09A /* HeaderTableViewCell.swift in Sources */,
 				5032B2E3224456A2002AD09A /* DateExtension.swift in Sources */,
 				5032B28622327EBB002AD09A /* UIButtonExtension.swift in Sources */,
+				503898692246E153000EDB43 /* ActivityFunctions.swift in Sources */,
 				5032B2DF22437065002AD09A /* UITextFieldExtension.swift in Sources */,
 				5032B290223470EB002AD09A /* AppUIButton.swift in Sources */,
 				5032B27C222FE1F3002AD09A /* UIViewExtension.swift in Sources */,
 				5032B27E222FE24B002AD09A /* TripsTableViewCell.swift in Sources */,
+				503898632246CA75000EDB43 /* AddActivityViewController.swift in Sources */,
 				5032B255222D7853002AD09A /* TripsViewController.swift in Sources */,
+				5038986C22477E55000EDB43 /* CoreData.xcdatamodeld in Sources */,
 				5032B2A3223DBCD9002AD09A /* ActivityTableViewCell.swift in Sources */,
 				5032B28E22346F76002AD09A /* PopupUIView.swift in Sources */,
 				5032B29D2238F43A002AD09A /* ActivityEnum.swift in Sources */,
@@ -536,6 +560,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5038986B22477E55000EDB43 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 5038986B22477E55000EDB43 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5032B22B222D6E46002AD09A /* Project object */;
 }

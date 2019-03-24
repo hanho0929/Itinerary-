@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Tq-eY-UUc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Activity View Controller-->
+        <scene sceneID="nck-4Q-osP">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="5Tq-eY-UUc" customClass="AddActivityViewController" customModule="Itinerary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NiQ-27-VlV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBw-x0-Rpx" customClass="PopupUIView" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="16" y="50" width="343" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-Hm-66p">
+                                        <rect key="frame" x="8" y="8" width="327" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCA-fe-8pn" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="348" width="100" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="f91-Ly-vKh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVE-Nz-Wzg" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                        <rect key="frame" x="235" y="348" width="100" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="dkb-aM-wW0"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descirption (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7l-og-Mc6">
+                                        <rect key="frame" x="8" y="310" width="327" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you doing?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rV0-G5-jr6">
+                                        <rect key="frame" x="8" y="272" width="327" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L4b-Mc-Q2e">
+                                        <rect key="frame" x="16" y="202.5" width="311" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf3-bT-KBs">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="45"/>
+                                                <color key="tintColor" name="Tint"/>
+                                                <state key="normal" image="default"/>
+                                                <connections>
+                                                    <action selector="activityTypeSelected:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="6e7-oV-xM9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tO7-7o-NwC">
+                                                <rect key="frame" x="64" y="0.0" width="55.5" height="45"/>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="school"/>
+                                                <connections>
+                                                    <action selector="activityTypeSelected:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="i88-4e-eiu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNQ-ya-FFA">
+                                                <rect key="frame" x="127.5" y="0.0" width="56" height="45"/>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="food"/>
+                                                <connections>
+                                                    <action selector="activityTypeSelected:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="X5g-lO-wiN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpQ-BK-1f1">
+                                                <rect key="frame" x="191.5" y="0.0" width="55.5" height="45"/>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="pet"/>
+                                                <connections>
+                                                    <action selector="activityTypeSelected:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="5sh-eV-AQE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5s-cs-rEh">
+                                                <rect key="frame" x="255" y="0.0" width="56" height="45"/>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="children"/>
+                                                <connections>
+                                                    <action selector="activityTypeSelected:" destination="5Tq-eY-UUc" eventType="touchUpInside" id="ddd-cp-veg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Lx-zY-Bxe">
+                                        <rect key="frame" x="8" y="52" width="327" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="L4b-Mc-Q2e" firstAttribute="leading" secondItem="yBw-x0-Rpx" secondAttribute="leading" constant="16" id="8FH-Bc-G7L"/>
+                                    <constraint firstItem="L4b-Mc-Q2e" firstAttribute="centerY" secondItem="yBw-x0-Rpx" secondAttribute="centerY" constant="25" id="V6l-Hp-hsX"/>
+                                    <constraint firstAttribute="height" constant="400" id="ggd-Xx-7TV"/>
+                                    <constraint firstAttribute="trailing" secondItem="L4b-Mc-Q2e" secondAttribute="trailing" constant="16" id="tDQ-rN-oWB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yBw-x0-Rpx" firstAttribute="top" secondItem="MaD-5u-7af" secondAttribute="top" constant="30" id="8hV-5c-cVO"/>
+                            <constraint firstItem="yBw-x0-Rpx" firstAttribute="leading" secondItem="MaD-5u-7af" secondAttribute="leading" constant="16" id="tQv-ZN-fae"/>
+                            <constraint firstItem="MaD-5u-7af" firstAttribute="trailing" secondItem="yBw-x0-Rpx" secondAttribute="trailing" constant="16" id="x0L-wj-G5l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MaD-5u-7af"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayPickerView" destination="4Lx-zY-Bxe" id="8Wh-HV-acC"/>
+                        <outlet property="subtitleTextField" destination="x7l-og-Mc6" id="zA9-3g-W82"/>
+                        <outlet property="titleLabel" destination="JG1-Hm-66p" id="6Zs-80-KAb"/>
+                        <outlet property="titleTextField" destination="rV0-G5-jr6" id="8r9-rP-bzB"/>
+                        <outletCollection property="activityTypeButtons" destination="qf3-bT-KBs" collectionClass="NSMutableArray" id="V1v-9d-XJA"/>
+                        <outletCollection property="activityTypeButtons" destination="tO7-7o-NwC" collectionClass="NSMutableArray" id="85X-94-gsb"/>
+                        <outletCollection property="activityTypeButtons" destination="gNQ-ya-FFA" collectionClass="NSMutableArray" id="3vR-jd-93a"/>
+                        <outletCollection property="activityTypeButtons" destination="FpQ-BK-1f1" collectionClass="NSMutableArray" id="nTK-E9-NOT"/>
+                        <outletCollection property="activityTypeButtons" destination="N5s-cs-rEh" collectionClass="NSMutableArray" id="fIi-Ah-4if"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlJ-AL-iEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925.60000000000002" y="-139.880059970015"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="children" width="45" height="45"/>
+        <image name="default" width="45" height="45"/>
+        <image name="food" width="45" height="45"/>
+        <image name="pet" width="45" height="45"/>
+        <image name="school" width="45" height="45"/>
+        <namedColor name="Accent">
+            <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.82745098039215681" green="0.32941176470588235" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
