@@ -43,10 +43,19 @@
 		503898632246CA75000EDB43 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503898622246CA75000EDB43 /* AddActivityViewController.swift */; };
 		503898672246D94E000EDB43 /* AddActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503898662246D94E000EDB43 /* AddActivityViewController.storyboard */; };
 		503898692246E153000EDB43 /* ActivityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503898682246E153000EDB43 /* ActivityFunctions.swift */; };
-		5038986C22477E55000EDB43 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */; };
+		503898892248336D000EDB43 /* MainTabViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 503898882248336D000EDB43 /* MainTabViewController.storyboard */; };
+		5038988B224D5FA1000EDB43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5038988A224D5FA1000EDB43 /* GoogleService-Info.plist */; };
+		5038988D225401BC000EDB43 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5038988C225401BC000EDB43 /* CalendarViewController.storyboard */; };
+		507B63B922557D840037BC2B /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B63B822557D840037BC2B /* CustomCell.swift */; };
+		50F6EF3422557EC5007297F9 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6EF3322557EC5007297F9 /* CalendarViewController.swift */; };
+		50F6EF362255D881007297F9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6EF352255D881007297F9 /* UIColorExtension.swift */; };
+		50F6EF3822593690007297F9 /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F6EF3722593690007297F9 /* CalendarHeader.swift */; };
+		AC05994FD3CAD8F86C0A7CF2 /* Pods_Itinerary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E95DA65553BBB894258C7C /* Pods_Itinerary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00E95DA65553BBB894258C7C /* Pods_Itinerary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Itinerary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E29AE2ACEE5D6C149A2880 /* Pods-Itinerary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.debug.xcconfig"; sourceTree = "<group>"; };
 		5032B233222D6E46002AD09A /* Itinerary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Itinerary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5032B236222D6E46002AD09A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5032B23D222D6E49002AD09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +94,14 @@
 		503898622246CA75000EDB43 /* AddActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		503898662246D94E000EDB43 /* AddActivityViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddActivityViewController.storyboard; sourceTree = "<group>"; };
 		503898682246E153000EDB43 /* ActivityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFunctions.swift; sourceTree = "<group>"; };
-		5038986B22477E55000EDB43 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		503898882248336D000EDB43 /* MainTabViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabViewController.storyboard; sourceTree = "<group>"; };
+		5038988A224D5FA1000EDB43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5038988C225401BC000EDB43 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
+		507B63B822557D840037BC2B /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		50F6EF3322557EC5007297F9 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		50F6EF352255D881007297F9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		50F6EF3722593690007297F9 /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		A9C1284527E07252BAE2B674 /* Pods-Itinerary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itinerary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC05994FD3CAD8F86C0A7CF2 /* Pods_Itinerary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +121,8 @@
 			children = (
 				5032B235222D6E46002AD09A /* Itinerary */,
 				5032B234222D6E46002AD09A /* Products */,
+				90D04C476069CCECDC1A4867 /* Pods */,
+				98002AB2889447524E49812D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +143,7 @@
 				5032B236222D6E46002AD09A /* AppDelegate.swift */,
 				5032B23F222D6E49002AD09A /* LaunchScreen.storyboard */,
 				5032B242222D6E49002AD09A /* Info.plist */,
-				5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */,
+				5038988A224D5FA1000EDB43 /* GoogleService-Info.plist */,
 			);
 			path = Itinerary;
 			sourceTree = "<group>";
@@ -153,8 +172,10 @@
 		5032B250222D77FF002AD09A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5032B28922346B81002AD09A /* AddTripViewController */,
+				5038988E225401D1000EDB43 /* CalendarViewController */,
+				503898872248330B000EDB43 /* MainTabViewController */,
 				5032B251222D780B002AD09A /* TripsViewController */,
+				5032B28922346B81002AD09A /* AddTripViewController */,
 				5032B2912238EF89002AD09A /* ActivitiesViewController */,
 				5032B2D522435C3F002AD09A /* AddDayViewController */,
 				503898612246CA36000EDB43 /* AddActivitiesViewController */,
@@ -181,6 +202,7 @@
 				5032B27B222FE1F3002AD09A /* UIViewExtension.swift */,
 				5032B2DC22436D70002AD09A /* UIViewControllerExtension.swift */,
 				5032B2E2224456A2002AD09A /* DateExtension.swift */,
+				50F6EF352255D881007297F9 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +286,42 @@
 			path = AddActivitiesViewController;
 			sourceTree = "<group>";
 		};
+		503898872248330B000EDB43 /* MainTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				503898882248336D000EDB43 /* MainTabViewController.storyboard */,
+			);
+			path = MainTabViewController;
+			sourceTree = "<group>";
+		};
+		5038988E225401D1000EDB43 /* CalendarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5038988C225401BC000EDB43 /* CalendarViewController.storyboard */,
+				50F6EF3322557EC5007297F9 /* CalendarViewController.swift */,
+				507B63B822557D840037BC2B /* CustomCell.swift */,
+				50F6EF3722593690007297F9 /* CalendarHeader.swift */,
+			);
+			path = CalendarViewController;
+			sourceTree = "<group>";
+		};
+		90D04C476069CCECDC1A4867 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10E29AE2ACEE5D6C149A2880 /* Pods-Itinerary.debug.xcconfig */,
+				A9C1284527E07252BAE2B674 /* Pods-Itinerary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		98002AB2889447524E49812D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00E95DA65553BBB894258C7C /* Pods_Itinerary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,9 +329,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5032B245222D6E49002AD09A /* Build configuration list for PBXNativeTarget "Itinerary" */;
 			buildPhases = (
+				20B5467AA230C1C021EC2437 /* [CP] Check Pods Manifest.lock */,
 				5032B22F222D6E46002AD09A /* Sources */,
 				5032B230222D6E46002AD09A /* Frameworks */,
 				5032B231222D6E46002AD09A /* Resources */,
+				A78FF8DC0D32D2A88EE094C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,17 +384,71 @@
 			files = (
 				5032B28822346B68002AD09A /* AddTripViewController.storyboard in Resources */,
 				5032B241222D6E49002AD09A /* LaunchScreen.storyboard in Resources */,
+				503898892248336D000EDB43 /* MainTabViewController.storyboard in Resources */,
 				5032B280222FE2EB002AD09A /* Colors.xcassets in Resources */,
 				5032B2D422435800002AD09A /* ActivitiesViewController.storyboard in Resources */,
 				5032B2D722435C7E002AD09A /* AddDayViewController.storyboard in Resources */,
 				503898672246D94E000EDB43 /* AddActivityViewController.storyboard in Resources */,
+				5038988D225401BC000EDB43 /* CalendarViewController.storyboard in Resources */,
 				5032B253222D7834002AD09A /* TripViewController.storyboard in Resources */,
+				5038988B224D5FA1000EDB43 /* GoogleService-Info.plist in Resources */,
 				5032B282222FE332002AD09A /* LuckiestGuy-Regular.ttf in Resources */,
 				5032B23E222D6E49002AD09A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20B5467AA230C1C021EC2437 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Itinerary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A78FF8DC0D32D2A88EE094C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Itinerary/Pods-Itinerary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5032B22F222D6E46002AD09A /* Sources */ = {
@@ -352,22 +466,25 @@
 				5032B24F222D7586002AD09A /* Data.swift in Sources */,
 				5032B28B22346BBE002AD09A /* AddTripViewController.swift in Sources */,
 				5032B2A1223B9862002AD09A /* HeaderTableViewCell.swift in Sources */,
+				50F6EF3822593690007297F9 /* CalendarHeader.swift in Sources */,
 				5032B2E3224456A2002AD09A /* DateExtension.swift in Sources */,
 				5032B28622327EBB002AD09A /* UIButtonExtension.swift in Sources */,
 				503898692246E153000EDB43 /* ActivityFunctions.swift in Sources */,
 				5032B2DF22437065002AD09A /* UITextFieldExtension.swift in Sources */,
 				5032B290223470EB002AD09A /* AppUIButton.swift in Sources */,
 				5032B27C222FE1F3002AD09A /* UIViewExtension.swift in Sources */,
+				50F6EF362255D881007297F9 /* UIColorExtension.swift in Sources */,
 				5032B27E222FE24B002AD09A /* TripsTableViewCell.swift in Sources */,
 				503898632246CA75000EDB43 /* AddActivityViewController.swift in Sources */,
 				5032B255222D7853002AD09A /* TripsViewController.swift in Sources */,
-				5038986C22477E55000EDB43 /* CoreData.xcdatamodeld in Sources */,
 				5032B2A3223DBCD9002AD09A /* ActivityTableViewCell.swift in Sources */,
 				5032B28E22346F76002AD09A /* PopupUIView.swift in Sources */,
 				5032B29D2238F43A002AD09A /* ActivityEnum.swift in Sources */,
+				50F6EF3422557EC5007297F9 /* CalendarViewController.swift in Sources */,
 				5032B2E122437493002AD09A /* DayFunctions.swift in Sources */,
 				5032B2A5223EA333002AD09A /* UITableViewCellExtension.swift in Sources */,
 				5032B2DD22436D70002AD09A /* UIViewControllerExtension.swift in Sources */,
+				507B63B922557D840037BC2B /* CustomCell.swift in Sources */,
 				5032B2DB22435D42002AD09A /* AddDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +621,7 @@
 		};
 		5032B246222D6E49002AD09A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10E29AE2ACEE5D6C149A2880 /* Pods-Itinerary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +640,7 @@
 		};
 		5032B247222D6E49002AD09A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9C1284527E07252BAE2B674 /* Pods-Itinerary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,19 +679,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5038986A22477E55000EDB43 /* CoreData.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5038986B22477E55000EDB43 /* CoreData.xcdatamodel */,
-			);
-			currentVersion = 5038986B22477E55000EDB43 /* CoreData.xcdatamodel */;
-			path = CoreData.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5032B22B222D6E46002AD09A /* Project object */;
 }

@@ -35,8 +35,6 @@ class AddDayViewController: UIViewController {
     }
     
     @IBAction func save(_ sender: UIButton) {
-        
-        
         if alreadyExists(datePicker.date) {
             let alert = UIAlertController(title: "Day Already Exists", message: "Pick Another Day", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel)

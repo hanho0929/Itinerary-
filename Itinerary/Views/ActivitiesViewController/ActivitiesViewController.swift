@@ -36,12 +36,12 @@ class ActivitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = tripTitle
-        addButton.createFloatActionButton()
+        addButton.createFloatingActionButton()
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+        view.backgroundColor = UIColor(named: "Background")
         updateTableView()
         
         

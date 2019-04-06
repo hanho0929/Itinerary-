@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L6U-Eq-ug2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="dkW-tx-ATm">
                                     <rect key="frame" x="0.0" y="225" width="375" height="1"/>
@@ -78,8 +78,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="K2a-Us-rk5">
+                                <rect key="frame" x="110" y="233" width="155" height="137"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwm-WS-ijf">
-                                <rect key="frame" x="299" y="547" width="56" height="56"/>
+                                <rect key="frame" x="299" y="478" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="74u-Yr-AqT"/>
                                     <constraint firstAttribute="width" constant="56" id="kZh-2z-ZkR"/>
@@ -93,19 +96,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="K2a-Us-rk5" firstAttribute="centerX" secondItem="oq3-ur-j2d" secondAttribute="centerX" id="0Ed-Rl-CNi"/>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="top" secondItem="agf-va-gES" secondAttribute="top" id="7UL-Mc-jpy"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="Xwm-WS-ijf" secondAttribute="trailing" constant="20" id="9ZR-zf-zKe"/>
-                            <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="Xwm-WS-ijf" secondAttribute="bottom" id="ChH-vh-IvO"/>
+                            <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="Xwm-WS-ijf" secondAttribute="bottom" constant="20" id="ChH-vh-IvO"/>
+                            <constraint firstItem="K2a-Us-rk5" firstAttribute="centerY" secondItem="oq3-ur-j2d" secondAttribute="centerY" id="D6X-jF-hke"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="trailing" secondItem="L6U-Eq-ug2" secondAttribute="trailing" id="TKU-Nc-Yhy"/>
                             <constraint firstItem="agf-va-gES" firstAttribute="bottom" secondItem="L6U-Eq-ug2" secondAttribute="bottom" id="gVc-hF-Zz0"/>
                             <constraint firstItem="L6U-Eq-ug2" firstAttribute="leading" secondItem="agf-va-gES" secondAttribute="leading" id="hhK-rK-Aod"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="agf-va-gES"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="children" image="children" id="Hlw-vm-WRu"/>
                     <navigationItem key="navigationItem" title="Trips" id="vta-do-82d"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="Xwm-WS-ijf" id="FFw-b4-NWl"/>
                         <outlet property="helpView" destination="aiH-GP-rMW" id="fBB-1L-2Go"/>
+                        <outlet property="logoImageView" destination="K2a-Us-rk5" id="yVd-6d-6We"/>
                         <outlet property="tableView" destination="L6U-Eq-ug2" id="ptw-Ap-OAo"/>
                     </connections>
                 </viewController>
@@ -117,16 +125,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="371" height="777"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-jx-1nN" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
-                                <rect key="frame" x="18" y="693" width="335" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="556-Wx-3cY"/>
-                                </constraints>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="closeHelpView:" destination="IZS-v9-eHK" eventType="touchUpInside" id="Zu4-IB-vkl"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NAK-oW-xrH">
                                 <rect key="frame" x="18" y="40" width="335" height="388"/>
                                 <subviews>
@@ -150,13 +148,23 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-jx-1nN" customClass="AppUIButton" customModule="Itinerary" customModuleProvider="target">
+                                <rect key="frame" x="18" y="468" width="335" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="556-Wx-3cY"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="IZS-v9-eHK" eventType="touchUpInside" id="Zu4-IB-vkl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="NAK-oW-xrH" firstAttribute="leading" secondItem="gh1-zY-TFv" secondAttribute="leading" constant="18" id="A1R-Y4-9xx"/>
                             <constraint firstAttribute="trailing" secondItem="NAK-oW-xrH" secondAttribute="trailing" constant="18" id="CGs-zS-4h0"/>
                             <constraint firstAttribute="trailing" secondItem="Epz-jx-1nN" secondAttribute="trailing" constant="18" id="Cpb-tL-exk"/>
-                            <constraint firstAttribute="bottom" secondItem="Epz-jx-1nN" secondAttribute="bottom" constant="40" id="Ikg-NG-1eV"/>
                             <constraint firstItem="Epz-jx-1nN" firstAttribute="leading" secondItem="gh1-zY-TFv" secondAttribute="leading" constant="18" id="KMv-J9-qEG"/>
+                            <constraint firstItem="Epz-jx-1nN" firstAttribute="top" secondItem="NAK-oW-xrH" secondAttribute="bottom" constant="40" id="Nmt-Wb-pCf"/>
                             <constraint firstItem="NAK-oW-xrH" firstAttribute="top" secondItem="gh1-zY-TFv" secondAttribute="topMargin" constant="32" id="th7-Zn-Dyf"/>
                         </constraints>
                     </view>
@@ -194,9 +202,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="children" width="45" height="45"/>
         <image name="deleteHelp" width="359" height="139"/>
         <image name="editingHelp" width="359" height="139"/>
-        <image name="plus" width="30" height="30"/>
+        <image name="launch" width="375" height="812"/>
+        <image name="plus" width="22.5" height="22.5"/>
         <namedColor name="Accent">
             <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

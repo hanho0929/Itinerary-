@@ -1,4 +1,4 @@
-//
+ //
 //  TripModel.swift
 //  Itinerary
 //

@@ -14,9 +14,11 @@ class TripsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet var helpView: UIVisualEffectView!
     var tripIndextToEdit: Int?
     var seenHelper = "seenHelper"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,30 @@ class TripsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        //getTripData()
+        
+        view.backgroundColor = UIColor(named: "Background")
+        addButton.createFloatingActionButton()
+        addButton.backgroundColor = Theme.tintColor
+        
+        
+        let radians = CGFloat(200 * Double.pi / 180)
+        
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.logoImageView.alpha = 0
+            self.logoImageView.transform = CGAffineTransform(scaleX: 3, y: 3).rotated(by: radians)
+            
+            let yRotation = CATransform3DMakeRotation(radians, 0, 1, 0)
+            self.logoImageView.layer.transform = CATransform3DConcat(self.logoImageView.layer.transform, yRotation)
+        }) { (success) in
+            self.getTripData()
+        }
+        
+        
+    }
+    
+    
+    fileprivate func getTripData() {
         TripFunctions.readTrips(completion: { [unowned self] in
             self.tableView.reloadData()
             
@@ -35,19 +61,7 @@ class TripsViewController: UIViewController {
                 
             }
         })
-
-       
-        
-        view.backgroundColor = UIColor(named: "Background")
-        addButton.createFloatActionButton()
-        addButton.backgroundColor = Theme.tintColor
-        
     }
-    
-    
-    
-
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddTripSegue" {
@@ -65,7 +79,7 @@ class TripsViewController: UIViewController {
             self.helpView.alpha = 0
         }) { (success) in
             self.helpView.removeFromSuperview()
-            UserDefaults.standard.set(false, forKey: self.seenHelper)
+            UserDefaults.standard.set(true, forKey: self.seenHelper)
         }
         
     }

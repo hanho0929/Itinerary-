@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f9f-ap-yJH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="0vW-Bw-jif">
+            <objects>
+                <tabBarController id="f9f-ap-yJH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rwF-ko-6Wx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FVP-h9-28v" kind="relationship" relationship="viewControllers" id="UIA-sD-BZj"/>
+                        <segue destination="4MN-j7-vkR" kind="relationship" relationship="viewControllers" id="nMP-WU-djE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee3-5x-VE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1161" y="-220"/>
+        </scene>
+        <!--TripViewController-->
+        <scene sceneID="Spg-Tp-lwR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TripViewController" id="FVP-h9-28v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="children" image="children" id="7tE-MV-CnZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Voo-Gw-jsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="-294"/>
+        </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="66i-d5-PJs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CalendarViewController" id="4MN-j7-vkR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Itu-eC-Lrx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="he2-GJ-Jvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-132" y="188"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="children" width="45" height="45"/>
+    </resources>
+</document>

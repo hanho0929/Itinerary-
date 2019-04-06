@@ -114,17 +114,25 @@ class AddTripViewController: UIViewController {
 extension AddTripViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        
+        //print()
+        //print(presentedViewController)
+        
         if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
         } else if let image = info[.originalImage] as? UIImage {
             self.imageView.image = image
         }
         
-        dismiss(animated: true, completion: nil)
+        
+        
+        picker.dismiss(animated: true, completion: nil)
+
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
+        //self.presentedViewController?.presentedViewController?.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
     
 }
